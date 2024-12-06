@@ -1,1 +1,36 @@
-a
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: LETRAS REPETIDAS
+    Considere a lista de letras abaixo:
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    Faça um programa que identifique as letras repetidas que estão contidas na lista e apresente cada letra apenas uma única vez, e em ordem alfabética.
+    *Letras maiúsculas e minúsculas são a mesma letra e não podem ser repetidas!
+    **Apresente apenas letras minúsculas!
+    */
+
+    //ENTRADA
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let letrasRep = [];
+    let letras = [];
+    
+    
+    for(let l = 0; l < listaDeLetras.length; l++ ) {
+        let minus = listaDeLetras[l].toLowerCase();
+
+        if (letras.includes(minus) && !letrasRep.includes(minus)){
+            letrasRep.push(minus);
+        } else {
+            letras.push(minus)
+        }
+
+    }
+    letrasRep.sort()
+    document.write(letrasRep.join(", "));
+    
+    //PROCESSAMENTO
+
+    
+    //SAÍDA
+
+</script>
