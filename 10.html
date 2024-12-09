@@ -8,11 +8,39 @@
     */
 
     //ENTRADA
+    const cnddtUm = prompt(`informe o nome do primeiro candidato`);
+    const cnddtDois = prompt(`informe o nome do segundo candidato`);
+    const cnddtTres = prompt(`informe o nome do terceiro candidato`);
 
+    const votantes = Number(prompt(`qual a quantidade de alunos votantes`));
 
+    let votoUm = 0;
+    let votoDois = 0;
+    let votoTres = 0;
+    let errados;
     //PROCESSAMENTO
 
+    for (let cnddts = 1; cnddts <= votantes; cnddts++) {
+        let pergunta = Number(prompt(`seu voto será em qual candidato? 1-${cnddtUm}, 2-${cnddtDois} ou 3-${cnddtTres}`));
 
+        if(pergunta == 1) {
+            votoUm++
+        } else if (pergunta == 2) {
+            votoDois++
+        } else if (pergunta == 3) {
+            votoTres++ 
+        } else {
+            errados++
+        }
+
+    }
+    let porcentagemUm = (votoUm / votantes) * 100;
+    let porcentagemDois = (votoDois / votantes) * 100;
+    let porcentagemTres = (votoTres / votantes) * 100;
     //SAÍDA
 
+    document.write(`a quantidade de votantes é: ${votantes} <br>
+    ${votoUm} são os votos no ${cnddtUm}, que representam ${porcentagemUm}%<br>
+    ${votoDois} são os votos no ${cnddtDois}, que representam ${porcentagemDois}%<br>
+    ${votoTres} são os votos no ${cnddtTres}, que representam ${porcentagemTres}%<br>`)
 </script>

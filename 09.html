@@ -6,11 +6,23 @@
     */
 
     //ENTRADA
-
+    let pplc = 50000;
+    let cincoAnos = 0;
+    let dezAnos = 0;
     
     //PROCESSAMENTO
-    
+    for (let anos = 1 ;anos <= 10; anos++ ){
+        pplc = pplc * 1.015 ;
+        if (anos == 5) {
+            cincoAnos = pplc
+        }
+
+        if (anos == 10) {
+            dezAnos = pplc
+        }
+    }
 
     //SAÍDA
-
+    document.write(`em 5 anos a populaçãoserá de: ${cincoAnos.toFixed(0)} <br>
+    em dez anos será de: ${dezAnos.toFixed(0)}`)
 </script>

@@ -5,11 +5,15 @@
     */
 
     //ENTRADA
-
+    let invest = 1000;
+    let dias;
 
     //PROCESSAMENTO
+    for (dias = 1; invest <=2000; dias++) {
+        invest = invest * 1.02;
+    }
 
-
+    let diasCorridos = Math.floor(dias / 5) * 2 + dias;
     //SAÍDA
-
+    document.write(`Joãozinho levará ${diasCorridos} dias corridos para alcançar R$2000`)
 </script>
