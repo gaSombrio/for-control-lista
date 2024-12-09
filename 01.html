@@ -18,14 +18,12 @@
     for(let l = 0; l < listaDeLetras.length; l++ ) {
         let minus = listaDeLetras[l].toLowerCase();
 
-        if (letras.includes(minus) && !letrasRep.includes(minus)){
-            letrasRep.push(minus);
-        } else {
+        if (!letras.includes(minus)){
             letras.push(minus)
         }
 
     }
-    letrasRep.sort()
+    letras.sort()
     document.write(letras.join(", "));
     
     //PROCESSAMENTO
